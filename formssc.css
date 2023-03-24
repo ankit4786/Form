@@ -56,6 +56,13 @@ input[type="submit"]:hover {
 .hide {
   display: none;
 }
+#mobileerror,
+#emailerror,
+#firstnameerror,
+#lastnameerror {
+  color: #ff0303;
+  font-size: small;
+}
 #showbtn,
 #hidebtn,
 #clearbtn {

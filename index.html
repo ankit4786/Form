@@ -28,6 +28,19 @@
           name="lastname"
           placeholder="Your last name.."
         />
+        <div id="lastnameerror"></div>
+
+        <label for="ename">Email</label>
+        <input type="text" id="ename" name="email" placeholder="Your email.." />
+        <div id="emailerror"></div>
+        <label for="mname"> Mobile Number</label>
+        <input
+          type="text"
+          id="mname"
+          name="mobilenumber"
+          placeholder="Your mobile no.."
+        />
+        <div id="mobileerror"></div>
         <label for="country">Country</label>
         <select id="country" name="country">
           <option value="australia">Australia</option>
@@ -38,8 +51,7 @@
         </select>
         <label for="gender">Gender</label>
         <br /><br />
-
-        <input type="radio" name="gender" value="male" />
+        <input type="radio" name="gender" value="male" checked="checked" />
         <label for="male">Male</label>
         <input type="radio" name="gender" value="female" />
         <label for="female">Female</label>
@@ -104,6 +116,7 @@
           </div>
         </div>
       </form>
+
       <div class="controls">
         <center>
           <input type="submit" id="sbmt" value="Submit" />

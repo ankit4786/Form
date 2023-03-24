@@ -6,7 +6,6 @@ let user_record = (function () {
   }
   return JSON.parse(record);
 })();
-
 const form = document.querySelector("#data-form");
 const submit = document.querySelector("#sbmt");
 const show_btn = document.querySelector("#showbtn");
@@ -53,37 +52,92 @@ function displaydata() {
     });
   }
 }
+
 hideDetailsBtn.addEventListener("click", () => {
   show_data.classList.add("hide");
 });
+
 clearBtn.addEventListener("click", () => {
   localStorage.clear();
   location.reload();
 });
-const fname = document.getElementById("#fname");
-const error = document.getElementById("#firstnameerror");
+
+let fname = document.getElementById("fname");
+let lname = document.getElementById("lname");
+let ferror = document.getElementById("firstnameerror");
+let lerror = document.getElementById("lastnameerror");
+const ename = document.getElementById("ename");
+const eerror = document.getElementById("emailerror");
+const mname = document.getElementById("mname");
+const merror = document.getElementById("mobileerror");
 
 fname.onblur = function () {
-  if (fname.innerHTML == " ") {
-    error.innerHTML = "Please enter the first name";
+  if (fname.value == "") {
+    ferror.innerHTML = "Please enter the first name";
   }
 };
 fname.onfocus = function () {
-  error.innerHTML = " ";
+  ferror.innerHTML = " ";
+};
+lname.onblur = function () {
+  if (lname.value == "") {
+    lerror.innerHTML = "Please enter the last name";
+  }
+};
+lname.onfocus = function () {
+  lerror.innerHTML = " ";
 };
 
-// input.onblur = function () {
-//   if (!input.value.includes("@")) {
+// ename.onblur = function () {
+//   if (!ename.value.includes("@")) {
 //     // not email
-//     input.classList.add("invalid");
-//     error.innerHTML = "Please enter a correct email.";
+//     // input.classList.add("invalid");
+//     eerror.innerHTML = "Please enter a correct email.";
 //   }
 // };
 
-// input.onfocus = function () {
-//   if (this.classList.contains("invalid")) {
-//     // remove the "error" indication, because the user wants to re-enter something
-//     this.classList.remove("invalid");
-//     error.innerHTML = "";
+// ename.onfocus = function () {
+//   // if (this.classList.contains("invalid")) {
+//   // remove the "error" indication, because the user wants to re-enter something
+//   // this.classList.remove("invalid");
+//   eerror.innerHTML = "";
+//   //  }
+// };
+// mname.onblur = function () {
+//   if (mname.value == "") {
+//     merror.innerHTML = "Please enter the Mobile name";
 //   }
 // };
+// mname.onfocus = function () {
+//   merror.innerHTML = " ";
+// };
+
+// Validates Email
+function isValidEmail(email) {
+  return /^[a-zA-Z]+[a-zA-Z0-9\.\-]*@[a-zA-Z]+(\.[a-z]{2,3})$/.test(email);
+}
+
+ename.addEventListener("blur", () => {
+  const enteredEmail = ename.value;
+
+  if (!isValidEmail(enteredEmail)) {
+    eerror.innerHTML = "Please enter a correct email.";
+  } else {
+    eerror.innerHTML = "";
+  }
+});
+
+// Validates Phone Number
+function isValidPhoneNumber(num) {
+  return /^\d{10}$/.test(num);
+}
+
+mname.addEventListener("blur", () => {
+  const enteredPhoneNumber = mname.value;
+
+  if (!isValidPhoneNumber(enteredPhoneNumber)) {
+    merror.innerHTML = "Please enter the Mobile name";
+  } else {
+    merror.innerHTML = " ";
+  }
+});
