@@ -1,0 +1,93 @@
+/* body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 500px;
+  border: 1px solid;
+  left: 50%;
+  top: 50%;
+} */
+body {
+  padding: 0;
+  box-sizing: border-box;
+  background-image: linear-gradient(to bottom, #b9f5c1, #154188);
+}
+* {
+  box-sizing: border-box;
+}
+
+label {
+  font-size: medium;
+  font-family: "Courier New";
+  font-weight: bolder;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #d77c1b;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 1% 25% 0px;
+}
+
+.hide {
+  display: none;
+}
+#showbtn,
+#hidebtn,
+#clearbtn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#showbtn:hover {
+  background-color: #d77c1b;
+}
+#showbtn:hover {
+  background-color: #d77c1b;
+}
+#clearbtn:hover {
+  background-color: #d77c1b;
+}
+#hidebtn:hover {
+  background-color: #d77c1b;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: white;
+  height: 200px;
+  width: clamp(350px, 80%, 600px);
+  margin-top: 15px;
+  border: none;
+  box-shadow: 0px 2px 5px black;
+  padding: 40px;
+}

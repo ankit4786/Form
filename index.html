@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details Form</title>
+    <link rel="stylesheet" href="formssc.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action=" " id="data-form">
+        <h2 id="title">
+          <center><u>ENTER YOUR DETAILS</u></center>
+        </h2>
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your name.."
+        />
+        <div id="firstnameerror"></div>
+        <label for="lname">Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name.."
+        />
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+          <option value="usa">India</option>
+          <option value="usa">China</option>
+        </select>
+        <label for="gender">Gender</label>
+        <br /><br />
+
+        <input type="radio" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="female" />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" value="others" />
+        <label for="others">Others</label>
+        <br /><br />
+        <label class="form-check-label" for="flexCheckChecked">
+          Language Known
+        </label>
+        <br /><br />
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            name="Language1"
+            value="english"
+            id="flexCheckDefault"
+          />
+
+          <label
+            class="form-check-label"
+            style="font-size: medium; font-family: Courier New"
+            for="flexCheckDefault"
+          >
+            English
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            name="Language2"
+            value="french"
+            id="flexCheckChecked"
+          />
+          <label class="form-check-label" for="flexCheckChecked">
+            French
+          </label>
+        </div>
+        <br />
+
+        <label for="subject">Optional Note</label>
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write something.."
+          style="height: 200px"
+        ></textarea>
+        <div class="form-group">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              name="check me out "
+              value="checked "
+              type="checkbox"
+              id="gridCheck"
+              checked
+            />
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+      </form>
+      <div class="controls">
+        <center>
+          <input type="submit" id="sbmt" value="Submit" />
+          <button id="showbtn" class="btn btn-primary">Show</button>
+          <button id="hidebtn" class="btn btn-primary">Hide</button>
+          <button id="clearbtn" class="btn btn-primary">Clear</button>
+        </center>
+      </div>
+      <div class="show hide"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
